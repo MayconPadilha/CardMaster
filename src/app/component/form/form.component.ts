@@ -39,5 +39,6 @@ export class FormComponent {
 
   onClick() {
     this.localStorageService.setItem('dadosPessoa', this.form.value);
+    window.location.href = '/card';
   }
 }

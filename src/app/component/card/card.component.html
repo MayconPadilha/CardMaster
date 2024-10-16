@@ -1,10 +1,41 @@
-<div>
-  <h1>{{dadosPessoa.nome}}</h1>
-  <h1>{{dadosPessoa.idade}}</h1>
-  <h1>{{dadosPessoa.telefone}}</h1>
-  <h1>{{dadosPessoa.email}}</h1>
-  <h1>{{dadosPessoa.endereco}}</h1>
-  <h1>{{dadosPessoa.numero}}</h1>
-  <h1>{{dadosPessoa.bairro}}</h1>
-  <h1>{{dadosPessoa.cidade}}</h1>
+<div class="container">
+  <div class="card" [class.flip]="isFlipped">
+    <div class="front">
+      <div class="card-header">
+        <h2>{{ dadosPessoa.nome }}</h2>
+      </div>
+      <div class="card-footer">
+        <button class="flip-button" (click)="flipCard()">
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+        </button>
+      </div>
+
+    </div>
+    <div class="back">
+      <div class="card-info">
+        <fa-icon [icon]="faCakeCandles"></fa-icon>
+        <span>Idade: {{ dadosPessoa.idade }}</span>
+      </div>
+      <div class="card-info">
+        <fa-icon [icon]="faPhone"></fa-icon>
+        <span>Telefone: {{ dadosPessoa.telefone }}</span>
+      </div>
+      <div class="card-info">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        <span>E-mail: {{ dadosPessoa.email }}</span>
+      </div>
+      <div class="card-info">
+        <fa-icon [icon]="faLocationDot"></fa-icon>
+        <span>Endereço: {{ dadosPessoa.endereco }}</span>
+        <span>, {{ dadosPessoa.numero }}</span>
+        <span>, {{ dadosPessoa.bairro }}</span>
+        <span>, {{ dadosPessoa.cidade }}</span>
+      </div>
+      <div class="card-footer">
+        <button class="flip-button" (click)="flipCard()">
+          <fa-icon [icon]="faArrowLeft"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
