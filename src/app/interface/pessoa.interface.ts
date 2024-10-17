@@ -1,10 +1,10 @@
 export interface Pessoa {
   nome: string;
-  idade: string;
+  idade: number;
   telefone: string;
   email: string;
   endereco: string;
-  numero: string;
+  numero: number;
   bairro: string;
   cidade: string;
 }

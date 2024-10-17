@@ -9,7 +9,6 @@
           <fa-icon [icon]="faArrowRight"></fa-icon>
         </button>
       </div>
-
     </div>
     <div class="back">
       <div class="card-info">
@@ -26,10 +25,10 @@
       </div>
       <div class="card-info">
         <fa-icon [icon]="faLocationDot"></fa-icon>
-        <span>Endereço: {{ dadosPessoa.endereco }}</span>
-        <span>, {{ dadosPessoa.numero }}</span>
-        <span>, {{ dadosPessoa.bairro }}</span>
-        <span>, {{ dadosPessoa.cidade }}</span>
+        <span>Endereço: {{ dadosPessoa.endereco }},</span>
+        <span>nº {{ dadosPessoa.numero }},</span>
+        <span>{{ dadosPessoa.bairro }},</span>
+        <span>{{ dadosPessoa.cidade }}.</span>
       </div>
       <div class="card-footer">
         <button class="flip-button" (click)="flipCard()">

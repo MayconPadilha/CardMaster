@@ -1,6 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+
+    --font-family-arial: Arial, Helvetica, sans-serif;
+    --font-family-inter: Inter, sans-serif;
+
+    --background-color-white: #fff;
+    --border-radius: 10px;
+    --color-white: #fff;
+
+    --card-flip-button-background: #ff7f50;
+    --card-flip-button-hover-background: #e86e41;
+
+    --card-color: #0959fd;
+    --card-header-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    --card-info-font-size: 16px;
+    --card-info-color: #555;
+
+    --form-background-color: #dbe4f2;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    --label-color: #111827;
+
+    --input-border-color: #6c757d;
+
+    --button-background-color: #007bff;
+    --button-hover-background-color: #0056b3;
+    --button-disabled-background-color: #dc3545;
+}
+
 body{
   background-color: #c5c5c5;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
 }

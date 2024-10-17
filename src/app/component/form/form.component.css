@@ -2,10 +2,10 @@ form {
   max-width: 30rem;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #6c757d;
-  border-radius: 10px;
-  background-color: #dbe4f2;
-  font-family: 'Inter', sans-serif;
+  border-radius: var(--border-radius);
+  background-color: var(--form-background-color);
+  font-family: var(--font-family-inter);
+  box-shadow: var(--box-shadow);
 }
 
 form .form-header {
@@ -14,7 +14,15 @@ form .form-header {
   align-items: center;
 }
 
-form .form-header div {
+.form-header h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.form-header div {
   color: #6c757d;
   width: 50px;
 }
@@ -31,27 +39,19 @@ form .dividir {
   gap: 10px;
 }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
 label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #111827;
+  color: var(--label-color);
   font-size: 0.875rem;
 }
 
 input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #6c757d;
-  border-radius: 0.5rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
 }
 
@@ -68,19 +68,19 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--button-background-color);
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--button-hover-background-color);
 }
 
 .form-navigation button:disabled {
-  background-color: #dc3545;
+  background-color: var(--button-disabled-background-color);
   cursor: not-allowed;
 }
 
@@ -113,5 +113,15 @@ button:hover {
   to {
     opacity: 0;
     transform: translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    margin: 10px;
+  }
+
+  .form-header h2 {
+    font-size: 21px;
   }
 }

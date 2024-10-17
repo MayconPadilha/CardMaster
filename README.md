@@ -1,27 +1,59 @@
-# CardMaster
+# Cartão de Visita Interativo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+Este projeto é uma aplicação Angular que permite criar e visualizar cartões de visita interativos. O usuário pode inserir informações pessoais em um formulário dividido em etapas e, em seguida, visualizar essas informações em um cartão que pode ser girado para revelar detalhes adicionais.
 
-## Development server
+### Link do projeto
+<link>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+- **Formulário de Cadastro**: Um formulário dividido em duas etapas que coleta informações pessoais, incluindo nome, idade, telefone, e-mail e endereço.
+- **Cartão Interativo**: Um cartão que pode ser girado para exibir detalhes do usuário, como idade, telefone, e-mail e endereço.
+- **Validação de Formulário**: Valida as entradas do usuário para garantir que todos os campos obrigatórios sejam preenchidos corretamente.
+- **Uso de FontAwesome**: Ícones da biblioteca FontAwesome são utilizados para melhorar a interface do usuário.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Estrutura do Projeto
 
-## Build
+### Componentes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **CardComponent**: Componente que exibe o cartão de visita interativo.
+  - Exibe o nome na frente do cartão.
+  - Detalhes como idade, telefone, e-mail e endereço são exibidos na parte de trás do cartão.
 
-## Running unit tests
+- **FormComponent**: Componente responsável pelo formulário de cadastro.
+  - Possui validações para garantir entradas corretas.
+  - Permite navegação entre as etapas do formulário.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Interfaces
 
-## Running end-to-end tests
+- **Pessoa**: Interface que define a estrutura dos dados pessoais coletados no formulário.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Dependências
 
-## Further help
+- **Angular**: Framework principal utilizado para construir a aplicação.
+- **FontAwesome**: Biblioteca de ícones utilizada para melhorar a estética da interface.
+- **Reactive Forms**: Utilizado para a manipulação e validação dos formulários.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Instalação
+
+Instale as dependências:
+
+1. Instale as dependências:
+npm install
+Inicie o servidor de desenvolvimento:
+
+2. Inicie o servidor de desenvolvimento:
+ng serve
+
+3. Abra seu navegador e acesse:
+http://localhost:4200
+
+### Como Usar
+
+1. Preencha o formulário com as informações solicitadas.
+2. Navegue entre as etapas do formulário usando os botões "Anterior" e "Próximo".
+3. Após preencher todas as informações, clique em "Gerar Cartão de Visitas".
+4. Você será redirecionado para a página do cartão, onde poderá visualizar os dados inseridos.
+
+
+

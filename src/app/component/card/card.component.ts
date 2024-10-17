@@ -23,11 +23,11 @@ export class CardComponent implements OnInit {
 
   dadosPessoa: Pessoa = {
     nome: '',
-    idade: '',
+    idade: 0,
     telefone: '',
     email: '',
     endereco: '',
-    numero: '',
+    numero: 0,
     bairro: '',
     cidade: '',
   };
@@ -36,7 +36,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
     this.dadosPessoa = this.localStorageService.getItem('dadosPessoa');
-    console.log('Dados carregados do localStorage:', this.dadosPessoa);
   }
 
   flipCard() {

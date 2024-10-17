@@ -13,18 +13,30 @@ import { CommonModule } from '@angular/common';
 export class FormComponent {
   step: number = 1;
 
-  constructor(private localStorageService: LocalStorageService) { }
+  constructor(private localStorageService: LocalStorageService) {}
 
   private formBuilder = inject(FormBuilder);
   protected form = this.formBuilder.group({
-    nome: ['', Validators.required],
-    idade: ['', Validators.required],
-    telefone: ['', Validators.required],
-    email: ['', Validators.required],
-    endereco: ['', Validators.required],
-    numero: ['', Validators.required],
-    bairro: ['', Validators.required],
-    cidade: ['', Validators.required],
+    nome: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(50)],
+    ],
+    idade: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
+    telefone: ['',[Validators.required, Validators.pattern(/^\(?\d{2}\)?\s?\d{5}-\d{4}|\(?\d{2}\)?\s?\d{4}-?\d{4}$/),],],
+    email: ['', [Validators.required, Validators.email]],
+    endereco: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(100)],
+    ],
+    numero: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
+    bairro: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(50)],
+    ],
+    cidade: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(50)],
+    ],
   });
 
   nextStep() {
